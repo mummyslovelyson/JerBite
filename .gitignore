@@ -1,3 +1,6 @@
+# Backend service (hosted at https://github.com/mummyslovelyson/JerBite-Backend)
+backend/
+
 # Node & dependencies
 node_modules/
 npm-debug.log*
@@ -20,4 +23,3 @@ build/
 # System files
 .DS_Store
 Thumbs.db
-
