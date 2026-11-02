@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,14 +46,20 @@
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.025);
   }
 
-  /* Glassmorphism Auth Textbox & Autofill Reset */
+  /* Glassmorphism Auth Textbox & Complete Autofill Transparency */
   .glass-input {
     background-color: transparent !important;
+    background: transparent !important;
     color: #FFFFFF !important;
     caret-color: #FFFFFF !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition: background-color 5000000s ease-in-out 0s, color 5000000s ease-in-out 0s !important;
   }
   .glass-input::placeholder {
-    color: rgba(255, 255, 255, 0.82) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
     opacity: 1 !important;
   }
   .glass-input:-webkit-autofill,
@@ -63,10 +70,16 @@
   [data-glass-form] input:-webkit-autofill:hover,
   [data-glass-form] input:-webkit-autofill:focus,
   [data-glass-form] input:-webkit-autofill:active {
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
     -webkit-text-fill-color: #FFFFFF !important;
-    -webkit-box-shadow: 0 0 0 1000px #240A3D inset !important;
-    box-shadow: 0 0 0 1000px #240A3D inset !important;
     caret-color: #FFFFFF !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
     transition: background-color 5000000s ease-in-out 0s, color 5000000s ease-in-out 0s !important;
   }
   .glass-input:-moz-autofill,
@@ -76,7 +89,10 @@
   [data-glass-form] input:-moz-autofill:hover,
   [data-glass-form] input:-moz-autofill:focus {
     filter: none !important;
-    background-color: #240A3D !important;
+    background-color: transparent !important;
+    background: transparent !important;
     color: #FFFFFF !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
   }
 }
