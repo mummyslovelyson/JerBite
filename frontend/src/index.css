@@ -56,20 +56,58 @@
     outline: none !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
     transition: background-color 5000000s ease-in-out 0s, color 5000000s ease-in-out 0s !important;
   }
   .glass-input::placeholder {
     color: rgba(255, 255, 255, 0.85) !important;
     opacity: 1 !important;
+    font-weight: 400 !important;
   }
+  .glass-input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.85) !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+  }
+  .glass-input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.85) !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+  }
+  .glass-input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.85) !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+  }
+
+  /* Hide Edge password reveal & clear icons so they don't double-render with custom eye icon */
+  .glass-input::-ms-reveal,
+  .glass-input::-ms-clear,
+  [data-glass-form] input::-ms-reveal,
+  [data-glass-form] input::-ms-clear {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Autofill Webkit/Blink, Standard & Firefox Complete Transparency Reset */
   .glass-input:-webkit-autofill,
   .glass-input:-webkit-autofill:hover,
   .glass-input:-webkit-autofill:focus,
   .glass-input:-webkit-autofill:active,
+  .glass-input:autofill,
+  .glass-input:autofill:hover,
+  .glass-input:autofill:focus,
+  .glass-input:autofill:active,
   [data-glass-form] input:-webkit-autofill,
   [data-glass-form] input:-webkit-autofill:hover,
   [data-glass-form] input:-webkit-autofill:focus,
-  [data-glass-form] input:-webkit-autofill:active {
+  [data-glass-form] input:-webkit-autofill:active,
+  [data-glass-form] input:autofill,
+  [data-glass-form] input:autofill:hover,
+  [data-glass-form] input:autofill:focus,
+  [data-glass-form] input:autofill:active {
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: #FFFFFF !important;
@@ -80,6 +118,8 @@
     background: transparent !important;
     border: none !important;
     outline: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
     transition: background-color 5000000s ease-in-out 0s, color 5000000s ease-in-out 0s !important;
   }
   .glass-input:-moz-autofill,

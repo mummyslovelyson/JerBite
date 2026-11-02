@@ -27,7 +27,7 @@ export default function GlassInput({
         placeholder={placeholder}
         autoComplete={autoComplete}
         minLength={minLength}
-        className="glass-input w-full bg-transparent pr-10 pl-0.5 pb-2.5 pt-1 text-[15px] font-normal text-white placeholder:text-white/80 placeholder:font-normal focus:outline-none tracking-normal caret-white border-none outline-none shadow-none"
+        className="glass-input w-full bg-transparent pr-12 pl-0 pb-2.5 pt-1 text-[15px] font-normal text-white placeholder:text-white/85 placeholder:font-normal focus:outline-none tracking-normal caret-white border-none outline-none shadow-none"
         {...props}
       />
       {togglePassword ? (
