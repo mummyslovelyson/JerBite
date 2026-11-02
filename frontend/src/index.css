@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FBF9F7] text-ink-900 antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-2xl border border-ink-200 bg-[#FBF9F7] px-3.5 py-2.5 text-xs font-medium text-ink-900 transition;
+  }
+  .input::placeholder {
+    color: #A8A29E;
+  }
+  .input:focus {
+    border-color: #FF5A26;
+    background-color: #FFFFFF;
+    outline: none;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-xs font-bold transition disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer;
+  }
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-brand-600 to-brand-700 text-white shadow-xs hover:from-brand-700 hover:to-brand-800;
+    box-shadow: 0 2px 10px 0 rgba(255, 90, 38, 0.28);
+  }
+  .btn-secondary {
+    @apply btn border border-ink-200 bg-white text-ink-700 hover:bg-brand-50 hover:text-brand-600 hover:border-brand-200;
+  }
+  .btn-ghost {
+    @apply btn border border-transparent bg-transparent text-ink-700 hover:bg-ink-100;
+  }
+  .btn-danger {
+    @apply btn bg-rose-600 text-white hover:bg-rose-700;
+  }
+  .card {
+    @apply rounded-3xl border border-ink-200 bg-white;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.025);
+  }
+
+  /* Glassmorphism Auth Textbox & Autofill Reset */
+  .glass-input {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
+  }
+  .glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.82) !important;
+    opacity: 1 !important;
+  }
+  .glass-input:-webkit-autofill,
+  .glass-input:-webkit-autofill:hover,
+  .glass-input:-webkit-autofill:focus,
+  .glass-input:-webkit-autofill:active,
+  [data-glass-form] input:-webkit-autofill,
+  [data-glass-form] input:-webkit-autofill:hover,
+  [data-glass-form] input:-webkit-autofill:focus,
+  [data-glass-form] input:-webkit-autofill:active {
+    -webkit-text-fill-color: #FFFFFF !important;
+    -webkit-box-shadow: 0 0 0 1000px #240A3D inset !important;
+    box-shadow: 0 0 0 1000px #240A3D inset !important;
+    caret-color: #FFFFFF !important;
+    transition: background-color 5000000s ease-in-out 0s, color 5000000s ease-in-out 0s !important;
+  }
+  .glass-input:-moz-autofill,
+  .glass-input:-moz-autofill:hover,
+  .glass-input:-moz-autofill:focus,
+  [data-glass-form] input:-moz-autofill,
+  [data-glass-form] input:-moz-autofill:hover,
+  [data-glass-form] input:-moz-autofill:focus {
+    filter: none !important;
+    background-color: #240A3D !important;
+    color: #FFFFFF !important;
+  }
+}
